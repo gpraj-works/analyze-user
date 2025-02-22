@@ -1,0 +1,59 @@
+{
+    "author": "Pushparaj",
+    "bugs": {
+        "url": "https://github.com/gpraj-works/analyze-user/issues"
+    },
+    "description": "A lightweight JavaScript/TypeScript library to analyze user environment, device, and network information from the client-side.",
+    "devDependencies": {
+        "@changesets/cli": "^2.28.1",
+        "@commitlint/cli": "^19.7.1",
+        "@commitlint/config-conventional": "^19.7.1",
+        "@eslint/js": "^9.21.0",
+        "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
+        "@types/node": "^22.13.5",
+        "eslint": "^9.21.0",
+        "eslint-plugin-prettier": "^5.2.3",
+        "globals": "^16.0.0",
+        "lint-staged": "^15.4.3",
+        "prettier": "^3.5.2",
+        "prettier-plugin-package-perfection": "^1.1.0",
+        "prettier-plugin-sort-json": "^4.1.1",
+        "tsup": "^8.3.6",
+        "typescript": "^5.7.3"
+    },
+    "engines": {
+        "node": ">=16"
+    },
+    "homepage": "https://github.com/gpraj-works/analyze-user#readme",
+    "keywords": [
+        "user analytics",
+        "browser detection",
+        "device info",
+        "network info",
+        "performance metrics",
+        "typescript",
+        "frontend analytics"
+    ],
+    "license": "MIT",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "name": "@analyze-user/client",
+    "publishConfig": {
+        "access": "public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gpraj-works/analyze-user.git"
+    },
+    "scripts": {
+        "build": "tsup",
+        "format": "prettier --check .",
+        "format:fix": "prettier --write . --list-different",
+        "lint": "eslint src",
+        "prerelease": "pnpm build && pnpm test && changeset add && changeset version",
+        "publish:npm": "changeset publish"
+    },
+    "sideEffects": false,
+    "types": "dist/index.d.ts",
+    "version": "0.0.1"
+}

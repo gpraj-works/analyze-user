@@ -1,0 +1,16 @@
+{
+    "$schema": "https://json.schemastore.org/prettierrc",
+    "arrowParens": "avoid",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "jsonRecursiveSort": true,
+    "plugins": [
+        "prettier-plugin-sort-json",
+        "prettier-plugin-package-perfection",
+        "@ianvs/prettier-plugin-sort-imports"
+    ],
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 4
+}
