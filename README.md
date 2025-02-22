@@ -1,22 +1,22 @@
-# @analyze-user/client
+# user-analysis
 
-A lightweight JavaScript/TypeScript library to analyze user environment, device, and network information from the client-side.
+A lightweight JavaScript/TypeScript library to analyze user environment, device, and network information.
 
 ## Installation
 
 ### Using npm:
 ```sh
-npm install @analyze-user/client
+npm install user-analysis
 ```
 
 ### Using Yarn:
 ```sh
-yarn add @analyze-user/client
+yarn add user-analysis
 ```
 
 ### Using pnpm:
 ```sh
-pnpm add @analyze-user/client
+pnpm add user-analysis
 ```
 
 ## Usage
@@ -24,14 +24,14 @@ pnpm add @analyze-user/client
 ### React Example
 ```tsx
 import React, { useEffect, useState } from "react";
-import { userAnalyzes, initEventTracking } from "@analyze-user/client";
+import { userAnalysis, initEventTracking } from "user-analysis";
 
 const UserAnalytics = () => {
   const [analytics, setAnalytics] = useState(null);
 
   useEffect(() => {
     (async () => {
-      const data = await userAnalyzes();
+      const data = await userAnalysis();
       setAnalytics(data);
     })();
 
@@ -54,14 +54,14 @@ export default UserAnalytics;
 
 <script>
 import { ref, onMounted } from "vue";
-import { userAnalyzes, initEventTracking } from "@analyze-user/client";
+import { userAnalysis, initEventTracking } from "user-analysis";
 
 export default {
   setup() {
     const analytics = ref(null);
 
     onMounted(async () => {
-      analytics.value = await userAnalyzes();
+      analytics.value = await userAnalysis();
       initEventTracking();
     });
 
@@ -73,11 +73,11 @@ export default {
 
 ### JavaScript Example (Axios Request)
 ```js
-import { userAnalyzes } from "@analyze-user/client";
+import { userAnalysis } from "user-analysis";
 import axios from "axios";
 
 (async () => {
-  const analytics = await userAnalyzes();
+  const analytics = await userAnalysis();
   console.log(analytics);
 
   await axios.post("https://your-api.com/analytics", analytics);
@@ -86,7 +86,7 @@ import axios from "axios";
 
 ## API Reference
 
-### `userAnalyzes(): Promise<UserAnalysis>`
+### `userAnalysis(): Promise<UserAnalysis>`
 Fetches detailed user analytics including:
 - Browser Info
 - Device Info
@@ -127,5 +127,5 @@ This project is licensed under the MIT License.
 
 ## Issues
 
-For any issues, please report them [here](https://github.com/gpraj-works/analyze-user/issues).
+For any issues, please report them [here](https://github.com/gpraj-works/user-analysis/issues).
 

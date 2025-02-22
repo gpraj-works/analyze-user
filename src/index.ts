@@ -1,10 +1,10 @@
-import { getBrowserInfo, BrowserInfo } from "./analytes/browser"
-import { getDeviceInfo, DeviceInfo } from "./analytes/device"
-import { getNetworkInfo, getUserIP, NetworkInfo } from "./analytes/network"
-import { getUserPreferences, getGeolocation, UserPreferences, GeolocationResult } from "./analytes/user"
-import { getPageInfo, PageInfo } from "./analytes/page"
-import { getPerformanceMetrics, PerformanceMetrics } from "./analytes/performance"
-import { trackClipboardEvents, trackWindowState } from "./analytes/events"
+import { getBrowserInfo, BrowserInfo } from "./analysis/browser"
+import { getDeviceInfo, DeviceInfo } from "./analysis/device"
+import { getNetworkInfo, getUserIP, NetworkInfo } from "./analysis/network"
+import { getUserPreferences, getGeolocation, UserPreferences, GeolocationResult } from "./analysis/user"
+import { getPageInfo, PageInfo } from "./analysis/page"
+import { getPerformanceMetrics, PerformanceMetrics } from "./analysis/performance"
+import { trackClipboardEvents, trackWindowState } from "./analysis/events"
 
 export type UserAnalysis = {
   browser: BrowserInfo
@@ -17,7 +17,7 @@ export type UserAnalysis = {
   performance: PerformanceMetrics
 }
 
-export const userAnalyzes = async (): Promise<UserAnalysis> => {
+export const userAnalysis = async (): Promise<UserAnalysis> => {
   return {
     browser: getBrowserInfo(),
     device: getDeviceInfo(),

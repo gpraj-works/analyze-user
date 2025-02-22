@@ -1,9 +1,9 @@
 {
     "author": "Pushparaj",
     "bugs": {
-        "url": "https://github.com/gpraj-works/analyze-user/issues"
+        "url": "https://github.com/gpraj-works/user-analysis/issues"
     },
-    "description": "A lightweight JavaScript/TypeScript library to analyze user environment, device, and network information from the client-side.",
+    "description": "A lightweight JavaScript/TypeScript library to analyze user environment, device, and network information",
     "devDependencies": {
         "@changesets/cli": "^2.28.1",
         "@commitlint/cli": "^19.7.1",
@@ -24,7 +24,7 @@
     "engines": {
         "node": ">=16"
     },
-    "homepage": "https://github.com/gpraj-works/analyze-user#readme",
+    "homepage": "https://github.com/gpraj-works/user-analysis#readme",
     "keywords": [
         "user analytics",
         "browser detection",
@@ -37,13 +37,13 @@
     "license": "MIT",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
-    "name": "@analyze-user/client",
+    "name": "user-analysis",
     "publishConfig": {
         "access": "public"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/gpraj-works/analyze-user.git"
+        "url": "git+https://github.com/gpraj-works/user-analysis.git"
     },
     "scripts": {
         "build": "tsup",
